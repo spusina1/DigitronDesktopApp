@@ -10,7 +10,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("digitron.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("digitron.fxml")); //objasniti
         primaryStage.setTitle("Digitron");
         primaryStage.setScene(new Scene(root, 200, 275));
         primaryStage.show();
