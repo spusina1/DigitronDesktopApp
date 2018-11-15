@@ -1,7 +1,50 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="ba.unsa.etf.rpr.tutorijal05.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="5" vgap="5" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.tutorijal05.Controller">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+
+    <columnConstraints>
+      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+      <RowConstraints valignment="CENTER" vgrow="ALWAYS" />
+  </rowConstraints>
+   <children>
+      <Button fx:id="btn7" onAction="#button7" text="7" GridPane.rowIndex="2" />
+      <Button fx:id="btn8" onAction="#button8" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="btn4" onAction="#button4" text="4" GridPane.rowIndex="3" />
+      <Button fx:id="btn5" onAction="#button5" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Button fx:id="btn9"  onAction="#button9" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button fx:id="btn6"  onAction="#button6" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Button fx:id="modBtn"  onAction="#mod" text="\%" GridPane.rowIndex="1" />
+      <Button fx:id="divideBtn" onAction="#div" text="/" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button fx:id="timesBtn" onAction="#mul" text="x" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Button fx:id="plusBtn" onAction="#add"  text="+" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.rowSpan="2">
+      </Button>
+      <Button fx:id="equalsBtn"  onAction="#equals" text="=" GridPane.columnIndex="3" GridPane.rowIndex="4" GridPane.rowSpan="2" />
+      <Button fx:id="btn3"  onAction="#button3" text="1" GridPane.rowIndex="4" />
+      <Button fx:id="btn2"  onAction="#button2" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Button fx:id="btn1"  onAction="#button1" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+      <Button fx:id="btn0"  onAction="#button0"  text="0" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+      <Button fx:id="dotBtn" onAction="#point" text="." GridPane.columnIndex="2" GridPane.rowIndex="5" />
+      <Button fx:id="minusBtn"  onAction="#sub" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+      <Label fx:id="display"  text="${controller.result}" GridPane.columnSpan="4" />
+   </children>
+
 </GridPane>
