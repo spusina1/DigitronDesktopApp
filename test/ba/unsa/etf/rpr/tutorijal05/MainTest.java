@@ -48,6 +48,8 @@ class MainTest {
         assertEquals("123", display.getText());
     }
 
+
+
     @Test
     public void number123Plus456 (FxRobot robot) {
         display = robot.lookup("#display").queryAs(Label.class);
@@ -59,6 +61,46 @@ class MainTest {
         robot.clickOn("#btn5");
         robot.clickOn("#btn6");
         assertEquals("456", display.getText());
+    }
+    @Test
+    public void number12PMul4 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn2");
+        robot.clickOn("#timesBtn");
+        robot.clickOn("#btn4");
+        robot.clickOn("#equalsBtn");
+        assertEquals("48.0", display.getText());
+    }
+    @Test
+    public void number12PDiv4 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn2");
+        robot.clickOn("#divideBtn");
+        robot.clickOn("#btn4");
+        robot.clickOn("#equalsBtn");
+        assertEquals("3.0", display.getText());
+    }
+    @Test
+    public void number12PSub4 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn2");
+        robot.clickOn("#minusBtn");
+        robot.clickOn("#btn4");
+        robot.clickOn("#equalsBtn");
+        assertEquals("8.0", display.getText());
+    }
+    @Test
+    public void number12PMod4 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn3");
+        robot.clickOn("#modBtn");
+        robot.clickOn("#btn4");
+        robot.clickOn("#equalsBtn");
+        assertEquals("1.0", display.getText());
     }
 
     @Test
