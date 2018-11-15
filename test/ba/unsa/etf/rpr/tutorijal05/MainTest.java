@@ -83,6 +83,16 @@ class MainTest {
         assertEquals("3.0", display.getText());
     }
     @Test
+    public void number12PDiv0 (FxRobot robot) {
+        display = robot.lookup("#display").queryAs(Label.class);
+        robot.clickOn("#btn1");
+        robot.clickOn("#btn2");
+        robot.clickOn("#divideBtn");
+        robot.clickOn("#btn0");
+        robot.clickOn("#equalsBtn");
+        assertEquals("Infinity", display.getText());
+    }
+    @Test
     public void number12PSub4 (FxRobot robot) {
         display = robot.lookup("#display").queryAs(Label.class);
         robot.clickOn("#btn1");
