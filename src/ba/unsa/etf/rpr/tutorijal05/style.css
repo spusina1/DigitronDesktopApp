@@ -1,0 +1,18 @@
+#display {
+    -fx-background-color: lightgreen;
+}
+#equalsBtn {
+    -fx-background-color: lightcoral;
+}
+
+Button{
+    -fx-max-width: infinity;
+}
+Label{
+    -fx-max-width: infinity;
+}
+
+GridPane{
+    -fx-padding: 5px, 5px, 5px, 5px;
+}
+
